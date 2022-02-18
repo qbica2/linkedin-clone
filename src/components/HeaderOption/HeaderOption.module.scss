@@ -20,3 +20,23 @@
         color:black;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .title{
+        display: none;
+    }
+    .icon{
+        margin-top:10px;
+    }
+  }
+
+  @media screen and (max-width:400px){
+    .headerOption{
+        margin-right: 10px;
+    }
+  }
+  @media screen and (max-width:300px){
+    .headerOption{
+        margin-right: 5px;
+    }
+  }

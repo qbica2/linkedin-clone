@@ -52,4 +52,16 @@
   display: -ms-flexbox;
   display: flex;
 }
+
+@media screen and (max-width: 1024px) {
+  .search {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .search input {
+    display: none;
+  }
+}
 /*# sourceMappingURL=Header.module.css.map */
