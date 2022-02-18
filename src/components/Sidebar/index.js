@@ -9,7 +9,7 @@ function Sidebar() {
                 <img src="https://picsum.photos/200/300" alt="" />
                 <Avatar className={style.avatar}/>
                 <h2 >Kubilay Akdemir</h2>
-                <h4>Junior Frontend Developer</h4>
+                <h4>Junior Front-End Web Developer</h4>
                 <div className={style.connections}>
                     <div className={style.connectionsTop}>
                         <h4>Connections</h4>

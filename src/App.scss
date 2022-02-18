@@ -7,9 +7,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.app-body{
-    display:flex;
     
+    .main{
+        width: 70%;
+        display:flex;
+        justify-content: space-evenly;
+        
+    }
 }
