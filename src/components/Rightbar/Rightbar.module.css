@@ -195,4 +195,10 @@
 .rightbar .footer .footerBot svg {
   margin: 0 5px;
 }
+
+@media screen and (max-width: 1150px) {
+  .rightbar {
+    display: none;
+  }
+}
 /*# sourceMappingURL=Rightbar.module.css.map */

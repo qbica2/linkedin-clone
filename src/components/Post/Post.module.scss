@@ -26,3 +26,21 @@
         justify-content: space-evenly;
     }
 }
+
+@media screen and (max-width: 820px){
+    .post{
+        padding:0;
+        .header{
+            padding: 10px;
+        }
+        .body{
+            padding: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 620px){
+    .post{
+        width: 90%;
+    }
+}

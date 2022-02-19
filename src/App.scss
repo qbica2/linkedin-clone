@@ -10,9 +10,52 @@
     
     .main{
         margin-top: 20px;
-        width: 75%;
+        width: 1200px;
         display:flex;
-        justify-content: space-evenly;
+        
         
     }
 }
+
+@media screen and (max-width: 1330px){
+    .app{
+        .main{
+            width: 1140px;
+        }
+    }
+}
+@media screen and (max-width: 1150px){
+    
+    .app{
+        .main{
+            width: 810px;
+            justify-content: center;
+        }
+        
+    }
+}
+@media screen and (max-width: 820px){
+    
+    .app{
+        .main{
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+            
+        }
+        
+    }
+}
+@media screen and (max-width: 620px){
+    
+    .app{
+        .main{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+    }
+}
+    
+
