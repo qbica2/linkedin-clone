@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import styles from "./Posts.module.css";
 import { Avatar } from "@mui/material";
 import InputOption from "../InputOption";
@@ -7,6 +7,8 @@ import ImageIcon from '@mui/icons-material/Image';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import ViewDayIcon from '@mui/icons-material/ViewDay';
+
+import Post from "../Post";
 
 function Posts() {
   return (
@@ -25,6 +27,13 @@ function Posts() {
           <InputOption Icon={ViewDayIcon}  title="Write article" color="#fc9295"/>
         </div>
       </div>
+      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
+      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
+      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
+      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
+      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
+      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
+      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
     </div>
   );
 }

@@ -1,7 +1,8 @@
 .posts{
     display: flex;
-    flex:0.6;
+    flex:0.5;
     margin:0 20px;
+    flex-direction: column;
 
     .inputContainer{
         width: 100%;
@@ -29,13 +30,13 @@
 
             }
             form{
-                width: 80%;
+                width: 90%;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: center;
                 input{
-                    width: 100%;
+                    width: 90%;
                     height: 45px;
                     margin: 4px 0 ;
                     font-size:14px;

@@ -1,6 +1,198 @@
 .rightbar {
-  -webkit-box-flex: 0.2;
-      -ms-flex: 0.2;
-          flex: 0.2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
+  margin: 0 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rightbar .addFeed {
+  background-color: #fff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rightbar .addFeed .addFeedTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 10px;
+}
+
+.rightbar .addFeed .addFeedTop h4 {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+}
+
+.rightbar .addFeed .addFeedMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rightbar .addFeed .addFeedMain .person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 10px;
+}
+
+.rightbar .addFeed .addFeedMain .person .avatar {
+  width: 48px;
+  height: 48px;
+}
+
+.rightbar .addFeed .addFeedMain .person .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 10px;
+}
+
+.rightbar .addFeed .addFeedMain .person .info h5 {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.9);
+  line-height: 1.5;
+}
+
+.rightbar .addFeed .addFeedMain .person .info p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.rightbar .addFeed .addFeedMain .person .info button {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #000;
+  border-radius: 20px;
+  font-size: 16px;
+  padding: 5px 15px;
+  line-height: 1.5;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rightbar .addFeed .addFeedMain .person .info button:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.rightbar .addFeed .addFeedBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 10px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  padding: 2px 6px;
+}
+
+.rightbar .image {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.rightbar .image img {
+  padding: 0 8px;
+}
+
+.rightbar .footer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 350px;
+  margin: 10px 0;
+}
+
+.rightbar .footer .footerTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+
+.rightbar .footer .footerTop div {
+  margin: 5px 0;
+}
+
+.rightbar .footer .footerTop div a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  margin: 5px;
+}
+
+.rightbar .footer .footerTop div a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.rightbar .footer .footerBot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  margin: 10px;
+}
+
+.rightbar .footer .footerBot svg {
+  margin: 0 5px;
 }
 /*# sourceMappingURL=Rightbar.module.css.map */
