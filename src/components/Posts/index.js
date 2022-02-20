@@ -10,14 +10,52 @@ import ViewDayIcon from '@mui/icons-material/ViewDay';
 
 import Post from "../Post";
 
+import { db } from "../../firebase";
+import { collection, getDocs, addDoc, orderBy, serverTimestamp, onSnapshot, query} from "firebase/firestore"
+
+
+
+
 function Posts() {
+
+  const [input, setInput] = useState("");
+  const [posts,setPosts] = useState([]);
+
+  const postsCollectionRef = collection(db,"posts");
+  
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(query(postsCollectionRef,orderBy("timestamp","desc")),snapshot => {
+      setPosts(snapshot.docs.map(doc => ({ 
+        id: doc.id,
+        data: doc.data(),
+      })))
+    })
+    return unsubscribe;
+  },[]);
+
+  const sendPost = async (e) =>{
+    e.preventDefault();
+    await addDoc(postsCollectionRef,{
+      name:"Kubilay Akdemir",
+      description:"Front End Developer",
+      message: input,
+      photoUrl:"",
+      timestamp: serverTimestamp(),
+    })
+    setInput("");
+}
+
+
+
   return (
     <div className={styles.posts}>
       <div className={styles.inputContainer}>
         <div className={styles.inputTop}>
           <Avatar className={styles.avatar} />
-          <form>
-            <input type="text" placeholder="Start a post" />
+          <form onSubmit={sendPost}>
+            <input value={input} onChange={(e)=>setInput(e.target.value)} type="text" placeholder="Start a post" />
+            
           </form>
         </div>
         <div className={styles.inputBottom}>
@@ -27,13 +65,17 @@ function Posts() {
           <InputOption Icon={ViewDayIcon}  title="Write article" color="#fc9295"/>
         </div>
       </div>
-      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
-      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
-      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
-      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
-      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
-      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
-      <Post name="Kubilay Akdemir" description="Jr.Front-End Developer" message="blablabblablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalablablablalbalalalbala"/>
+      {
+        posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+          <Post
+          key={id}
+          name={name}
+          description={description}
+          message={message}
+          photoUrl={photoUrl}
+          />
+        ))
+      }
     </div>
   );
 }
