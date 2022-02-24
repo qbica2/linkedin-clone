@@ -13,8 +13,9 @@ import Post from "../Post";
 import { db } from "../../firebase";
 import { collection, getDocs, addDoc, orderBy, serverTimestamp, onSnapshot, query} from "firebase/firestore"
 
+import { useSelector } from "react-redux";
 
-
+import FlipMove from 'react-flip-move';
 
 function Posts() {
 
@@ -22,6 +23,8 @@ function Posts() {
   const [posts,setPosts] = useState([]);
 
   const postsCollectionRef = collection(db,"posts");
+
+    const user= useSelector(state => state.user.user);
   
 
   useEffect(() => {
@@ -37,10 +40,10 @@ function Posts() {
   const sendPost = async (e) =>{
     e.preventDefault();
     await addDoc(postsCollectionRef,{
-      name:"Kubilay Akdemir",
-      description:"Front End Developer",
+      name: user.displayName,
+      description:user.job || user.email,
       message: input,
-      photoUrl:"",
+      photoUrl:user.photoUrl || "",
       timestamp: serverTimestamp(),
     })
     setInput("");
@@ -52,7 +55,7 @@ function Posts() {
     <div className={styles.posts}>
       <div className={styles.inputContainer}>
         <div className={styles.inputTop}>
-          <Avatar className={styles.avatar} />
+          <Avatar className={styles.avatar} src={user.photoUrl} >{user?.email[0].toUpperCase()}</Avatar>
           <form onSubmit={sendPost}>
             <input value={input} onChange={(e)=>setInput(e.target.value)} type="text" placeholder="Start a post" />
             
@@ -65,6 +68,8 @@ function Posts() {
           <InputOption Icon={ViewDayIcon}  title="Write article" color="#fc9295"/>
         </div>
       </div>
+      <FlipMove>
+
       {
         posts.map(({ id, data: { name, description, message, photoUrl } }) => (
           <Post
@@ -76,6 +81,7 @@ function Posts() {
           />
         ))
       }
+      </FlipMove>
     </div>
   );
 }

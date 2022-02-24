@@ -1,15 +1,20 @@
 import React from 'react'
 import style from './Sidebar.module.css'
-import {Avatar} from "@mui/material";
+import { Avatar } from "@mui/material";
+
+import { useSelector } from 'react-redux'
 
 function Sidebar() {
+
+  const user = useSelector(state => state.user.user)
+
   return (
     <div className={style.sidebar}>
         <div className={style.top}>
                 <img src="https://picsum.photos/200/300" alt="" />
-                <Avatar className={style.avatar}/>
-                <h2 >Kubilay Akdemir</h2>
-                <h4>Junior Front-End Web Developer</h4>
+                <Avatar src={user.photoUrl} className={style.avatar}>{user?.email[0].toUpperCase()}</Avatar>
+                <h2 >{user.displayName}</h2>
+                <h4>{user.job|| user.email}</h4>
                 <div className={style.connections}>
                     <div className={style.connectionsTop}>
                         <h4>Connections</h4>

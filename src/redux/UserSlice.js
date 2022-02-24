@@ -5,10 +5,10 @@ export const usersSlice = createSlice({
     name: 'user',
     initialState: {
         user: null,
-        loading: false,
     },
     reducers: {
         login: (state, action) => {
+            state.user = action.payload;
         },
         logout: (state) => {
             state.user=null;

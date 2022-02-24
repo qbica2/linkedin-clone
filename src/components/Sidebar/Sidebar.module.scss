@@ -46,7 +46,9 @@
             margin-bottom: 10px;
             width: 72px;
             height: 72px;
-            
+            position: relative;
+            top:auto;
+            z-index: 4;
         }
 
         .connections{

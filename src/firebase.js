@@ -4,12 +4,12 @@ import { getAuth } from "@firebase/auth"
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBl-QaSKmK_ze9KIw9lTjlM3ob8xJWBTrA",
-    authDomain: "linkedin-clone-a6736.firebaseapp.com",
-    projectId: "linkedin-clone-a6736",
-    storageBucket: "linkedin-clone-a6736.appspot.com",
-    messagingSenderId: "313471838844",
-    appId: "1:313471838844:web:99abaeb0546c5dbe9c37f9"
+    apiKey: process.env.REACT_APP_FIREBASE_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
   };
 
   const firebaseApp = initializeApp(firebaseConfig);
