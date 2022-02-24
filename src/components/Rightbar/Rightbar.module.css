@@ -59,6 +59,7 @@
 .rightbar .addFeed .addFeedMain .person .avatar {
   width: 48px;
   height: 48px;
+  cursor: pointer;
 }
 
 .rightbar .addFeed .addFeedMain .person .info {

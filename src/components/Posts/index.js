@@ -11,7 +11,7 @@ import ViewDayIcon from '@mui/icons-material/ViewDay';
 import Post from "../Post";
 
 import { db } from "../../firebase";
-import { collection, getDocs, addDoc, orderBy, serverTimestamp, onSnapshot, query} from "firebase/firestore"
+import { collection, addDoc, orderBy, serverTimestamp, onSnapshot, query } from "firebase/firestore"
 
 import { useSelector } from "react-redux";
 
@@ -24,8 +24,7 @@ function Posts() {
 
   const postsCollectionRef = collection(db,"posts");
 
-    const user= useSelector(state => state.user.user);
-  
+  const user= useSelector(state => state.user.user);
 
   useEffect(() => {
     const unsubscribe = onSnapshot(query(postsCollectionRef,orderBy("timestamp","desc")),snapshot => {
@@ -35,7 +34,7 @@ function Posts() {
       })))
     })
     return unsubscribe;
-  },[]);
+  },[postsCollectionRef]);
 
   const sendPost = async (e) =>{
     e.preventDefault();

@@ -1,6 +1,6 @@
 import React,{ forwardRef } from 'react'
 import styles from './Post.module.css'
-import {Avatar} from "@mui/material";
+import { Avatar } from "@mui/material";
 import InputOption from "../InputOption";
 
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';

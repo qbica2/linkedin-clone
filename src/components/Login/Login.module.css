@@ -126,6 +126,7 @@
   font-weight: 400;
   color: rgba(0, 0, 0, 0.9);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .login .footer a:hover {

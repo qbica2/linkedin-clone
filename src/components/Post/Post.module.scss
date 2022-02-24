@@ -7,6 +7,9 @@
     .header{
         display: flex;
         margin-bottom: 10px;
+        .avatar{
+            cursor: pointer;
+        }
         .info{
             margin-left: 10px;
             p{

@@ -13,6 +13,10 @@
   margin-bottom: 10px;
 }
 
+.post .header .avatar {
+  cursor: pointer;
+}
+
 .post .header .info {
   margin-left: 10px;
 }

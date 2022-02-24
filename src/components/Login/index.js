@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import style from "./Login.module.css"
 
-import {useDispatch,useSelector} from "react-redux";
+import { useDispatch } from "react-redux";
 import { login } from "../../redux/UserSlice";
 
 import { auth } from "../../firebase";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword,updateProfile  } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 
 
@@ -43,7 +43,7 @@ function Login() {
         photoURL: photoUrl,
         description: job,
       })
-      console.log(user)
+      // console.log(user)
        dispatch(login({
         email: user.user.email,
         uid: user.user.uid,
@@ -97,11 +97,37 @@ function Login() {
       <form>
         <h1>Sign in</h1>
         <p>Stay uptated on your professional world</p>
-        <input type="text" placeholder="Name (required if registering)" value={name} onChange={(e) => setName(e.target.value)} />
-        <input type="text" placeholder="Job (required if registering)" value={job} onChange={(e) => setJob(e.target.value)} />
-        <input type="text" placeholder="Photo Url" value={photoUrl} onChange={(e) => setPhotoUrl(e.target.value)} />
-        <input type="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input 
+        type="text" 
+        placeholder="Name (required if registering)" 
+        value={name} 
+        onChange={(e) => setName(e.target.value)} 
+        />
+        <input 
+        type="text" 
+        placeholder="Job (required if registering)" 
+        value={job} 
+        onChange={(e) => setJob(e.target.value)} 
+        />
+        <input 
+        type="text" 
+        placeholder="Photo Url"
+        value={photoUrl} 
+        onChange={(e) => setPhotoUrl(e.target.value)} 
+        />
+        <input 
+        type="email" 
+        placeholder="Email" 
+        required value={email} 
+        onChange={(e) => setEmail(e.target.value)} 
+        />
+        <input 
+        type="password" 
+        placeholder="Password" 
+        required 
+        value={password} 
+        onChange={(e) => setPassword(e.target.value)} 
+        />
         <button type='submit' onClick={logintoApp}>Sign in</button>
       </form>
       <p>New to Linkedin? <span className={style.register} onClick={register}>Join Now</span></p>

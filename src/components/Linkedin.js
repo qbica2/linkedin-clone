@@ -33,7 +33,7 @@ function Linkedin() {
         dispatch(logout())
       }
     })
-  }, [])
+  }, [dispatch])
 
 
 
