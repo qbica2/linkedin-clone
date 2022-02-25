@@ -114,8 +114,17 @@
 
 @media screen and (max-width:420px){
     .login{
+        .logo{
+            margin: 16px 16px 0;
+        }
+        p{
+            margin-top: 12px;
+        }
         form{
-            width: 100%;
+            width: 90%;
+            input{
+                margin-top: 12px;
+            }
         }
     }
 }
