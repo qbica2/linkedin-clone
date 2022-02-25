@@ -4,6 +4,13 @@
   margin-bottom: 10px;
   border-radius: 10px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .post .header {
@@ -57,7 +64,7 @@
 
 @media screen and (max-width: 620px) {
   .post {
-    width: 90%;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=Post.module.css.map */

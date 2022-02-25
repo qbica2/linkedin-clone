@@ -67,11 +67,11 @@ function Posts() {
           <InputOption Icon={ViewDayIcon}  title="Write article" color="#fc9295"/>
         </div>
       </div>
-      <FlipMove>
+      <FlipMove className={styles.anime}>
 
       {
         posts.map(({ id, data: { name, description, message, photoUrl } }) => (
-          <Post
+          <Post 
           key={id}
           name={name}
           description={description}
