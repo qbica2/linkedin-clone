@@ -37,8 +37,14 @@
   font-size: 15px;
 }
 
-.post .body {
+.post .body p {
+  width: 90%;
   overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 
 .post .buttons {

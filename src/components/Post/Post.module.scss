@@ -24,7 +24,13 @@
         }
     }
     .body{
-        overflow-wrap: anywhere;
+        p{
+            width: 90%;
+            overflow-wrap: anywhere;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
     }
     .buttons{
         display: flex;
