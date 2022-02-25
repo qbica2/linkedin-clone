@@ -34,7 +34,7 @@ function Posts() {
       })))
     })
     return unsubscribe;
-  },[postsCollectionRef]);
+  },[]);
 
   const sendPost = async (e) =>{
     e.preventDefault();
