@@ -43,7 +43,6 @@ function Login() {
         photoURL: photoUrl,
         description: job,
       })
-      // console.log(user)
        dispatch(login({
         email: user.user.email,
         uid: user.user.uid,
@@ -53,6 +52,7 @@ function Login() {
       }))
     }catch(error){
       console.log(error.message)
+      alert(error.message)
     }
       
   }
@@ -70,6 +70,7 @@ function Login() {
       }))
     }catch(error){
       console.log(error.message)
+      alert(error.message)
     }
 
   }
